@@ -1,6 +1,12 @@
-const { src, dest, watch } = require("gulp");
+const { src, dest, watch, parallel } = require("gulp");
+
+// CSS
 const sass = require('gulp-sass')(require('sass'));
 const plumber = require('gulp-plumber');
+
+
+// Imagenes
+const webp = require('gulp-webp');
 
 function css (done) {
 
@@ -11,6 +17,20 @@ function css (done) {
 
     done(); // Callback que avisa a gulp cuando llegamos al final
 }
+
+function versionWebp (done) {   
+
+    const opciones = {
+        quality: 50
+    };
+
+    src('src/img/**/*')
+    .pipe( webp(opciones) )
+    .pipe( dest('build/img'));
+
+    done();
+}
+
 function dev(done){
     watch('src/scss/**/*.scss', css);
 
@@ -19,4 +39,5 @@ function dev(done){
 }
 
 exports.css = css;
-exports.dev = dev;
+exports.versionWebp = versionWebp;
+exports.dev = parallel(versionWebp, dev);
