@@ -491,7 +491,7 @@ img {
 }
 .lineup .dia {
   text-transform: uppercase;
-  margin-bottom: 5rem;
+  margin: 5rem 0;
 }
 
 @media (min-width: 768px) {
@@ -519,6 +519,19 @@ img {
   margin: 2rem auto 0 auto;
 }
 
+.calendario {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendario li span {
+  font-weight: 400;
+}
+
 .edm .nombre-escenario:after {
   background-image: url(../img/icono_edm.png);
 }
@@ -530,7 +543,13 @@ img {
 .bg-amarillo {
   background-color: #FEF46D;
 }
+.bg-amarillo li:nth-child(odd) {
+  background-color: #fdee21;
+}
 
 .bg-verde {
   background-color: #4CB8B3;
+}
+.bg-verde li:nth-child(odd) {
+  background-color: #3b9691;
 }
