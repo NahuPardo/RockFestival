@@ -20,6 +20,9 @@
     @include m.desktop {
         @include m.grid(6, 2rem)
     }
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .overlay {
@@ -40,5 +43,21 @@
     picture {
         display: block;
         max-width: 80rem;
+    }
+}
+
+.btn-cerrar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: v.$blanco;
+    color: v.$negro;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+
+    &:hover {
+        cursor: pointer;
+        background-color: v.$rosa;
     }
 }

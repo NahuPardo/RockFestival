@@ -322,6 +322,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
+body.fijar-body {
+  overflow: hidden;
+}
 
 p {
   font-size: 2rem;
@@ -491,7 +494,12 @@ img {
 }
 .lineup .dia {
   text-transform: uppercase;
-  margin: 5rem 0;
+  margin: 4rem 0;
+}
+@media (min-width: 768px) {
+  .lineup .dia {
+    margin: 5rem 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -541,14 +549,26 @@ img {
 }
 
 .bg-amarillo {
+  margin-top: 2rem;
   background-color: #FEF46D;
+}
+@media (min-width: 768px) {
+  .bg-amarillo {
+    margin-top: 0;
+  }
 }
 .bg-amarillo li:nth-child(odd) {
   background-color: #fdee21;
 }
 
 .bg-verde {
+  margin-top: 2rem;
   background-color: #4CB8B3;
+}
+@media (min-width: 768px) {
+  .bg-verde {
+    margin-top: 0;
+  }
 }
 .bg-verde li:nth-child(odd) {
   background-color: #3b9691;
@@ -590,6 +610,9 @@ img {
     gap: 2rem;
   }
 }
+.galeria-imagenes:hover {
+  cursor: pointer;
+}
 
 .overlay {
   position: fixed;
@@ -606,4 +629,27 @@ img {
 .overlay picture {
   display: block;
   max-width: 80rem;
+}
+
+.btn-cerrar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: #000000;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+.btn-cerrar:hover {
+  cursor: pointer;
+  background-color: #F53756;
+}
+
+.boletos {
+  padding: 5rem 0;
+}
+.boletos h3 {
+  text-align: center;
+  color: #FFFFFF;
 }

@@ -10,8 +10,11 @@
         color: v.$blanco;
     }
     .dia {
+        @include m.tablet {
+            margin: 5rem 0;
+        }
         text-transform: uppercase;
-        margin: 5rem 0;
+        margin: 4rem 0; 
     }
 }
 
@@ -60,6 +63,10 @@
 }
 
 .bg-amarillo {
+    @include m.tablet {
+        margin-top: 0;
+    }
+    margin-top: 2rem;
     background-color: v.$amarillo;
     li:nth-child(odd) {
         background-color: darken(v.$amarillo, 15%);
@@ -67,6 +74,10 @@
 }
 
 .bg-verde {
+    @include m.tablet {
+        margin-top: 0;
+    }
+    margin-top: 2rem;
     background-color: v.$verde;
     li:nth-child(odd) {
         background-color: darken(v.$verde, 10%);
